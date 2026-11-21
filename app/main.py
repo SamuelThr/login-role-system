@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from . import models, schemas, security
 from .database import engine, get_db, SessionLocal
 
-models.Base.metadata.create_all(bid=engine)
+models.Base.metadata.create_all(bind=engine)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
