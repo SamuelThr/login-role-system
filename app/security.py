@@ -10,7 +10,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 #Se configura BCrypt como algoritmo de hashing de contraseñas
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-def has_password(password: str) -> str:
+def hash_password(password: str) -> str:
     """Convierte una contraseña en texto plano en un hash seguro con BCrypt."""
     return pwd_context.hash(password)
 
